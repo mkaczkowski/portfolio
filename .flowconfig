@@ -1,11 +1,31 @@
 [ignore]
+.*/node_modules/documentation/.*
+.*/node_modules/typography/.*
+.*/node_modules/fbjs/.*
+.*/node_modules/react-side-effect/.*
+.*/node_modules/styled-components/.*
+.*/node_modules/preact/.*
+.*/node_modules/jss/.*
+.*/public/.*
+.*/locales/.*
+.*/dist/.*
+.*/devDist/.*
+<PROJECT_ROOT>/.flow-bins-cache/.*
 
 [include]
 
 [libs]
-
-[lints]
+flow-typed
 
 [options]
+module.system.node.resolve_dirname=node_modules
+module.name_mapper='^@core\/\(.*\)$' -> '<PROJECT_ROOT>/src/core/\1'
+module.name_mapper='^@components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^@assets\/\(.*\)$' -> '<PROJECT_ROOT>/src/assets/\1'
+module.name_mapper='^@theme\/\(.*\)$' -> '<PROJECT_ROOT>/src/theme/\1'
+module.name_mapper='^@lib\/\(.*\)$' -> '<PROJECT_ROOT>/src/lib/\1'
+module.name_mapper='^@story\/\(.*\)$' -> '<PROJECT_ROOT>/.storybook/\1'
 
-[strict]
+module.file_ext=.css
+module.file_ext=.js
+module.file_ext=.json
