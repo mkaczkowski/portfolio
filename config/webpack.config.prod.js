@@ -98,36 +98,16 @@ module.exports = {
               )
             )
           },
-          // {
-          //   test: /\.svg$/,
-          //   use: [
-          //     {
-          //       loader: "babel-loader"
-          //     },
-          //     {
-          //       //TOODO reconsider emit svg file instead of load
-          //       loader: "react-svg-loader",
-          //       options: {
-          //         jsx: true, // true outputs JSX tags,
-          //         svgo: {
-          //           floatPrecision: 3
-          //         }
-          //       }
-          //     }
-          //   ]
-          // },
           {
-            test: /\.(svg)$/i,
+            test: /\.svg$/,
             use: [
               {
-                loader: require.resolve("file-loader"),
-                options: {
-                  name: "static/media/[name].[hash:8].[ext]"
-                }
+                loader: "babel-loader"
               },
               {
-                loader: require.resolve("image-webpack-loader"),
+                loader: "react-svg-loader",
                 options: {
+                  jsx: true, // true outputs JSX tags,
                   svgo: {
                     floatPrecision: 3
                   }
