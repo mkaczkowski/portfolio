@@ -41,7 +41,7 @@ module.exports = {
     modules: ["node_modules", paths.appNodeModules].concat(process.env.NODE_PATH.split(path.delimiter).filter(Boolean)),
     extensions: [".js", ".json"],
     alias: {
-      react: "preact-compat",
+      "react": "preact-compat",
       "react-dom": "preact-compat",
       "@core": path.resolve(__dirname, "../src/core/"),
       "@components": path.resolve(__dirname, "../src/components/"),

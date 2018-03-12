@@ -6,7 +6,7 @@ import { LionessProvider } from './lib/lioness';
 import loadable from 'loadable-components';
 import Home from './Home';
 
-export const Home2 = loadable(() => import('./Home'));
+export const Contact = loadable(() => import('./Contact'));
 
 class App extends Component<any> {
   state = {
@@ -24,8 +24,10 @@ class App extends Component<any> {
 
     return (
       <LionessProvider messages={messages} locale={language} debug={true}>
+        <div>
         <Home />
-        <Home2 />
+        <Contact />
+        </div>
       </LionessProvider>
     );
   }
