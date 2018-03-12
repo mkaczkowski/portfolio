@@ -161,10 +161,14 @@ module.exports = {
     ...languages.map(
       lang =>
         new HtmlWebpackPlugin({
-          language: lang,
           filename: lang + ".html",
-          inject: true,
+          inject: false,
           template: paths.appHtml,
+          language: lang,
+          description:"sample description",
+          copyright:"sample copyright",
+          // excludeChunks: [ 'polyfill' ],
+          // chunks: ['main'],
           minify: {
             removeComments: true,
             collapseWhitespace: true,

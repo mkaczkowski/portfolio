@@ -63,7 +63,8 @@
   },
   "reactSnap": {
     "inlineCss": true,
-    "skipThirdPartyRequests": true
+    "skipThirdPartyRequests": true,
+    "preloadImages":true
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [

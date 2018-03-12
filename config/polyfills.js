@@ -1,5 +1,17 @@
 'use strict';
 
+
+// require('promise-polyfill');
+
+//https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
+// require('nodelist-foreach-polyfill');
+
+
+if(!window.fetch){
+  require('whatwg-fetch');
+}
+
+
 // if (typeof Promise === 'undefined') {
 //   // Rejection tracking prevents a common issue where React gets into an
 //   // inconsistent state due to an error, but it gets swallowed by a Promise,

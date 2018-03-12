@@ -1,3 +1,19 @@
 {
-  "HELLO_WORLD": "Hallo World"
+    "publicPath": "/",
+    "chunks": {
+        "main": {
+            "size": 245496,
+            "entry": "/static/js/main.08f0e86d.js",
+            "hash": "08f0e86dd87495a5d0a5",
+            "css": [
+                "/static/css/main.967c1c92.css"
+            ]
+        }
+    },
+    "js": [
+        "/static/js/main.08f0e86d.js"
+    ],
+    "css": [
+        "/static/css/main.967c1c92.css"
+    ]
 }
