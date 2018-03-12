@@ -1,9 +1,12 @@
 //@flow
 
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { LionessProvider } from './lib/lioness';
+// import Button from '@components/button/Button';
+import loadable from 'loadable-components';
 import Home from './Home';
-import Button from '@components/button/Button';
+
+export const Home2 = loadable(() => import('./Home'));
 
 class App extends Component<any> {
   state = {
@@ -16,14 +19,13 @@ class App extends Component<any> {
   };
 
   render() {
+    console.info('app');
     const { language, messages } = this.state;
 
     return (
       <LionessProvider messages={messages} locale={language} debug={true}>
-        <Fragment>
-          <Button onClick={this.changeLanguage}>DE</Button>
-          <Home />
-        </Fragment>
+        <Home />
+        <Home2 />
       </LionessProvider>
     );
   }

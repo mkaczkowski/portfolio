@@ -4,6 +4,9 @@ import _fromPairs from 'lodash/fromPairs';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { loadComponents, getState } from 'loadable-components';
+
+window.snapSaveState = () => getState();
 
 //TODO implement
 const ALL_LANGUAGES = ['en', 'de'];
@@ -42,6 +45,11 @@ async function init() {
   const language = document.documentElement.lang;
   window.translations = await convertTranslations(language);
   const rootElement = document.getElementById('root');
+
+  if (rootElement.hasChildNodes()) {
+    await loadComponents();
+  }
+
   render(<App />, rootElement);
 }
 
