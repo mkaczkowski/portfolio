@@ -62,7 +62,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "reactSnap": {
-    "inlineCss": false
+    "source":"/build",
+    "inlineCss": false,
+    "skipThirdPartyRequests": true
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
@@ -84,6 +86,7 @@
     "@storybook/addons": "^3.3.15",
     "@storybook/react": "^3.3.15",
     "babel-core": "^6.26.0",
+    "i18n-webpack-plugin": "^1.0.0",
     "postcss-import": "^11.1.0",
     "storybook-host": "^4.1.5"
   }
