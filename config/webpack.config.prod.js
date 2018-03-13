@@ -6,8 +6,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const InterpolateHtmlPlugin = require("react-dev-utils/InterpolateHtmlPlugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const WebpackFlushChunksPlugin = require('webpack-flush-chunks-html');
-// const ExtractCssChunks = require("extract-css-chunks-webpack-plugin")
 const paths = require("./paths");
 const getClientEnvironment = require("./env");
 
@@ -134,9 +132,6 @@ module.exports = {
     //   openAnalyzer:true,
     // }),
     new InterpolateHtmlPlugin(env.raw),
-    // new WebpackFlushChunksPlugin({
-      /* options (see below) */
-    // }),
     new HtmlWebpackPlugin({
       inject: false,
       template: paths.appHtmlEmpty,
